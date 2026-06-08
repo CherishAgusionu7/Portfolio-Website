@@ -1,0 +1,58 @@
+:root{
+  --bg: #fbfbfb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-2: #0ea5a4;
+  --text: #0f172a;
+  --max-width: 1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.site-header{background:transparent;padding:1rem 0;border-bottom:1px solid rgba(15,23,42,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand .name{font-family:Playfair Display,Georgia,serif;margin:0;font-size:1.6rem}
+.brand .sub{margin:0;color:var(--muted);font-size:0.95rem}
+.site-nav a{color:var(--text);text-decoration:none;margin-left:1rem;font-weight:600}
+.site-nav a:hover{color:var(--accent)}
+
+.hero{padding:3rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start}
+.hero-text h2{font-family:Playfair Display,serif;margin:0 0 0.5rem;font-size:1.8rem}
+.lead{color:var(--muted);margin-top:0}
+.contact-inline{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-direction:column;gap:0.4rem;color:var(--muted)}
+.contact-inline li i{margin-right:0.6rem;color:var(--accent)}
+.card{background:var(--card);border-radius:10px;padding:1rem;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+
+.section{padding:2.25rem 0}
+.section-title{font-family:Playfair Display,serif;margin:0 0 1rem;font-size:1.3rem}
+.muted{color:var(--muted)}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-top:1rem}
+.skill{background:var(--card);padding:1rem;border-radius:10px;display:flex;flex-direction:column;align-items:center;gap:0.6rem;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+.skill i{color:var(--accent-2)}
+.skill-label{font-weight:600}
+
+.project, .job{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04);margin-bottom:1rem}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+.contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
+.contact-list li{margin-bottom:0.5rem}
+
+.site-footer{border-top:1px solid rgba(15,23,42,0.04);padding:1.25rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .experience-grid{grid-template-columns:1fr}
+  .site-nav{display:none}
+}
+
+@media (min-width:901px){
+  .contact-inline{flex-direction:column}
+}
+
+/* Small polish */
+a{color:var(--accent);}
+h3,h4{margin:0 0 0.5rem}
